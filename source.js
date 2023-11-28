@@ -9,6 +9,8 @@ const animation_time = 0.5;
 var isDone;
 var isPlaythrough;
 
+
+
 function table_setup(){
     // Generate table rows and cells
     var cellId = 0;
@@ -426,7 +428,6 @@ function playAll(){
 //     //clear game
 //     cleargame();
 
-
 // }
 
 function load_options(){
@@ -471,6 +472,9 @@ function load_options(){
     }
 }
 
+
+
+
 //on load do this
 document.addEventListener('DOMContentLoaded', function () {
     //load table and options
@@ -497,6 +501,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('random-game-button').addEventListener('click', gameRandom);
     document.getElementById('play-all-button').addEventListener('click', playAll);
 
+    document.getElementById('upload-game-type-select', (event) => {
+        document.querySelector('.dropdown-menu').addEventListener('click', function(event) {
+            alert("clicked");
+            if (event.target.matches('.game-type-option')) {
+                document.getElementById('upload-game-type-select').textContent = event.target.textContent;
+            }
+        });
+    });
 
     const optionIdElements = document.querySelectorAll(".option_id_item");
 
@@ -516,6 +528,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
 
 
 // function animateMove(id1, id2) {
