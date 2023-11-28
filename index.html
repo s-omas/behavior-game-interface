@@ -23,7 +23,7 @@
         <div class="row">
             <div class="d-flex justify-content-center">
                 <!-- left col: instruction panel -->
-                <div class="col-sm mt-1">
+                <!-- <div class="col-sm mt-1">
                         <div class="card p-3 bg-light helperCard">
                         <h4>Viewing Collaboration Games</h4>
                         <p>After choosing a game, use the buttons at the bottom of the screen to advance through the player moves.</p>
@@ -32,7 +32,7 @@
                             <h4>More information</h4>
                             <p>Here we can put a variety of text about the info, and more information about the game rules.</p>
                         </div>
-                </div>
+                </div> -->
 
                 <!-- middle col: game panel -->
                 <div class="col-7" style="min-width: 738;">
@@ -51,16 +51,17 @@
                                     <div id="is-finished-box"></div>
                                 </div>
                                 <div class="dropdown  m-4">
-                                    <button class=" btn btn-primary btn-large" id="game_id_button">Select Player ID ⏷</button>
+                                    <button style="display: none;" class=" btn btn-primary btn-large" id="game_id_button">Select Player ID ⏷</button>
                                     <div class="dropdown-content" id="game_id_dropdown">
                                     </div>
                                 </div>
                 
                                 <div class="dropdown disabled m-4" id="game_goal_dropdown-holder">
-                                    <button class="btn btn-primary disabled" id="goal_type_button">Select Goal Type ⏷</button>
+                                    <button style="display: none;" class="btn btn-primary disabled" id="goal_type_button">Select Goal Type ⏷</button>
                                     <div class="dropdown-content " id="game_goal_dropdown">
                                     </div>
                                 </div>
+
                                 <button id="random-game-button" type="button" style="height: fit-content;" class="btn btn-success btn-large m-4">Random Game</button>
                             </div>   
                         </div>
@@ -93,17 +94,17 @@
                     </div>
 
                     <!-- Game step controls -->
-                    <div class="row" id="controlrow" style="display: none;">
+                    <div class="row" id="controlrow">
                         <div class="container mt-5">
                             <div class="d-flex justify-content-center">
                                 <div class="btn-toolbar" role="toolbar">
-                                    <div class="btn-group mr-2" role="group" aria-label="Button Group"  id="ingamecontrols">
+                                    <div class="btn-group mr-2" role="group" aria-label="Button Group"  id="ingamecontrols" style="display: none;">
                                         <button id="reset_button" type="button" class="btn btn-outline-danger">⇤ Reset</button>
                                         <button id="undo_move_button" type="button" class="btn btn-outline-primary">◀ Undo Move</button>
                                         <button id="next_move_button" type="button" class="btn btn-outline-primary mr-2">Play Next Move ▶</button>
                                     </div>
-                                    <div class="btn-group mr-2" role="group" aria-label="Second group">
-                                        <button id="play-all-button" type="button" class="btn btn-outline-success" style="margin-left: 5px;">Play All Moves⇥</button>
+                                    <div class="btn-group mr-2" id="playthrough-div" role="group" aria-label="Second group">
+                                        <button id="play-all-button" type="button" class="btn btn-outline-success" style="margin-left: 5px; display: none;">Play All Moves⇥</button>
                                     </div>
                                 </div>
                             </div>

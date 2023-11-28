@@ -95,30 +95,34 @@ function getGame(){
     help.style.display = 'none';
 
     //show info panel
-    updateInfoPanel()
-    panel = document.getElementById("infopanel");
-    panel.style.display = 'block';
+    //updateInfoPanel()
+    //panel = document.getElementById("infopanel");
+    //panel.style.display = 'block';
 
 
     //disable buttons on move
-    var button = document.getElementById("game_id_button");
-    button.style.display = 'none';
-    button = document.getElementById("goal_type_button");
-    button.style.display = 'none';
+    // var button = document.getElementById("game_id_button");
+    // button.style.display = 'none';
+    // button = document.getElementById("goal_type_button");
+    // button.style.display = 'none';
     button = document.getElementById("random-game-button");
     button.style.display = 'none';
 
     //show topcard
-    updateInfoPanel()
-    panel = document.getElementById("topCard");
-    panel.style.display = 'block';
+    // updateInfoPanel()
+    // panel = document.getElementById("topCard");
+    // panel.style.display = 'block';
     isDone = false;
 
     // var controls = document.getElementById("ingamecontrols");
     // controls.style.display = 'block';
 
-    // var t = document.getElementById("gametable");
-    // t.style.display = 'block';
+
+
+    var t = document.getElementById("gametable");
+    t.style.display = 'block';
+
+
 
 }
 
@@ -137,8 +141,8 @@ function loadgame(){
     var tRow = document.getElementById("gamerow")
     tRow.style.display = 'flex';
 
-    var cRow = document.getElementById("controlrow")
-    cRow.style.display = 'flex';
+    var cRow = document.getElementById("play-all-button")
+    cRow.style.display = 'block';
 
 }
  //load white cells
@@ -185,7 +189,7 @@ function nextMove(){
         button.style.display = 'none';
 
         currentMove++;
-        updateInfoPanel();
+        //updateInfoPanel();
         if (currentMove >= currentGame['total_moves']){
             //in case game is over
             //add game completed badge
